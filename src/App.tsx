@@ -12,13 +12,17 @@ function App() {
     setTestsToDo(num);
   }
 
+  function handleBack() {
+    setIsSelecting(true);
+  }
+
   return (
     <div className="flex flex-col justify-center items-center mt-20">
       <img src="merol.png" className="max-w-xl" />
       {isSelecting ? (
         <Select handleStart={handleSelect} />
       ) : (
-        <Counter testsToDo={testsToDo} />
+        <Counter testsToDo={testsToDo} handleBack={handleBack} />
       )}
     </div>
   );
