@@ -6,7 +6,6 @@ interface Props {
 
 export default function Select({ handleStart }: Props) {
   const inputRef = useRef<HTMLInputElement>(null);
-  const n = inputRef.current?.value;
 
   return (
     <>
